@@ -1,0 +1,246 @@
+
+
+.slider-filtro .rs-slider-progress-bar{
+    transition: none!important;
+}
+
+.slider-filtro.rs-slider{
+    transition: none!important;
+}
+
+.rs-slider-handle :active{
+    transition: none!important;
+}
+.rs-slider-handle{
+    transition: none!important;
+}
+
+.calculador-tittle{
+    font-size: 29px;
+    color: #032854;
+}
+
+
+.rango-filtro .rs-input-number-btn-group-vertical{
+    display: none!important;
+}
+
+.slider-filtro .rs-slider-progress-bar{
+    background-color: #1D2142!important;
+    height: 12px!important;
+}
+
+.slider-filtro .rs-slider-bar{
+    height: 12px!important; 
+    background-color: #1D2142;
+}
+
+.calculador-slider{
+    width: 90%;
+    margin-top: 10px;
+    border: 1px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+.rs-tooltip {
+   background-color: #1D2142 !important;
+   border: 1px solid white !important;
+   font-size: 18px !important;
+   font-family: 'Poppins';
+   color: white;
+   border: 0 !important;
+   border-radius: 20px;
+
+}
+.slider-filtro .rs-slider-handle:before{
+    border: 2px solid #1D2142 ;
+    background-color: white;
+    width: 25px;
+    height: 25px;
+}
+
+.slider-filtro .rs-slider-handle:hover:before{
+    box-shadow: 0 0 0 8px #03285438!important;
+}
+
+.rango-filtro{
+    border: none;
+}
+
+.rango-filtro:focus{
+    box-shadow: none;
+    outline: none;
+}
+.rango-filtro .rs-input-group:not(.rs-input-group-disabled).rs-input-group-focus{    
+    box-shadow: none;
+    outline: none;
+}
+
+.rango-filtro .rs-input:disabled{
+    background-color: #fff;
+    color:#032854;
+    font-size: 16px;
+}
+
+.calculador-capital{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color:#032854;
+}
+
+.calculador-capital .rango-filtro{
+    width: auto;
+}
+.calculador-capital .rango-filtro input{
+    font-size: 16px;
+    color:#032854;
+    padding: 0px;
+}
+
+.valor-cuota{
+    margin-top: 20px;
+    text-align: left;
+    font-size: 20px;
+    color:#032854;
+    font-weight: 600;
+}
+
+.botones-cuotas{
+    transition: none!important;
+}
+
+.botones-cuotas input[type="radio"]{
+    display: none;
+}
+
+.botones-cuotas label {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 15px 25px;
+    border: 1px solid #c3c3c3;      
+    color: #032854;
+    border-radius: 5px;
+    font-size: 16px;    
+  }
+
+  .botones-cuotas  input[type="radio"]:checked + label {
+    border: 1px solid #c3c3c3;    
+    color: #032854;
+    border-radius: 5px;
+    background-color: #eeedaa;
+    font-size: 16px;    
+  }
+
+  .botones-cuotas label:hover{
+      cursor: pointer;
+  }
+
+  /*FORMULARIO*/
+
+.formulario-container{
+    margin-top: 50px;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fila-formulario{
+    display: flex;
+    justify-content: space-between;    
+    column-gap: 2.75rem;
+}
+
+.campo-formulario{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.campo-formulario label{
+    font-size: 18px;
+    color: #032854;
+}
+
+.campo-formulario input{
+    width: 100%;
+    border: 1px solid #c3c3c3;
+    padding: 0.75rem;
+    margin-top: 0.75rem;
+    border-radius: 10px;
+}
+
+.campo-formulario input:focus{
+  outline: none;
+  box-shadow: 0 0 6pt 1pt #dce0e6;
+}
+.campo-formulario input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+.campo-formulario span{
+    font-size: 13px; 
+    color: rgb(170, 170, 170);
+}
+
+.boton-enviar-formulario{
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #032854;
+    padding: 0.75rem 1.25rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+
+.boton-enviar-formulario:hover{
+    color: #032854;
+    background-color: #EEEDAA;
+
+}
+
+.form-footer-text{
+    font-size: 14px;
+    max-width: 700px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #aaaaaa;
+}
+.TituloRange{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 90%;
+}
+
+@media only screen and (max-width: 768px) {
+    .calculador-conteiner{
+        height: auto;
+        margin: 50px 25px;
+        row-gap: 10px;
+    }
+    .calculador-tittle{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .fila-formulario{
+      flex-wrap: wrap;
+    }
+    .calculador-slider{
+        padding: 10px;
+    } 
+}
