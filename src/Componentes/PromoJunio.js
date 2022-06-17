@@ -165,7 +165,8 @@ function PromoJunio() {
         formData.append("cantCuotas",JSON.stringify(formDatos.cuotas))
         formData.append("nombre",JSON.stringify(formDatos.nombre))
         formData.append("Desarrollo",JSON.stringify(formDatos.Desarrollo))
-      axios.post(`https://eugenie.com.ar/webApi/public/mail/Linea574`, formData)
+        
+      axios.post(`https://promo.desarrollosdelsud.com.ar/webApi/public/FormularioPromoDesarrollo`, formData)
       .then(function (response) {
         
       })
