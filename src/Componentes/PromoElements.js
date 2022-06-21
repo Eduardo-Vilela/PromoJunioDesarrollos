@@ -41,28 +41,26 @@ justify-content: center;
 `
 export const Box1 = styled.div`
 width: 100%;
-height: 22vh;
+height: 300px;
 
 @media (max-width: 480px) { 
   height: 30vh;
     }
     @media (max-width: 767px) { 
-      height: 30vh;
+      height: 200px;
+      margin-bottom: 30px;
      }
 `
 export const Box2 = styled.div`
-width: 80%;
-height: 60vh;
-margin: auto;
-background-color: #1D2142;
-border-radius: 10px;
+width: 100%;
+height: 550px;
 
 @media (max-width: 480px) { 
   height: 60vh;
   width: 100%;
     }
     @media (max-width: 767px) { 
-      height: 60vh;
+      height: 500px;
       width: 100%;
      }
 `
@@ -108,12 +106,20 @@ text-shadow: 3px 1px 2px black;
      }
 `
 export const ContenedorForm = styled.form`
-width: 100%;
+width: 80%;
 height: 100%;
 margin: auto;
 display: flex;
 flex-direction: column;
 justify-content: center;
+
+background-color: #1D2142;
+border-radius: 10px;
+
+@media (max-width: 480px) { 
+  width: 100%;
+  height: 90%;
+}
 `
 export const TituloForm = styled.h2`
 color: white;
@@ -123,10 +129,10 @@ font-weight: 600;
 text-align: center;
 
 @media (max-width: 480px) { 
-      font-size: 14px;
+      font-size: 18px;
     }
     @media (max-width: 767px) { 
-      font-size: 14px;
+      font-size: 18px;
      }
 `
 
@@ -164,6 +170,8 @@ border: 0;
 font-size: 18px;
 font-family: 'Poppins';
 text-indent: 10px;
+text-align: center;
+
 @media (max-width: 480px) { 
       font-size: 15px;
     }
@@ -184,10 +192,11 @@ background-color: #759D01;
 
 
 :disabled {
-      opacity: 0.6 !important;
+      background-color: #C4C4C4;
     }
 
     @media (max-width: 480px) { 
+      width: 35%;
       height: 5vh;
       font-size: 14px;
     }
@@ -205,9 +214,9 @@ export const SubContenedorForm = styled.div`
 
     @media (max-width: 480px) { 
       flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 135px;
+      justify-content: space-around;
+      align-items: center;
+      height: 135px;
     }
     @media (max-width: 767px) { 
       flex-direction: column;
@@ -217,12 +226,12 @@ export const SubContenedorForm = styled.div`
      }
 `
 export const InputSelect = styled.select`
-height: 45px;
-border-radius: 10px;
-border: 0 !important;
-font-size: 17px;
-color: #000E4A;
-appearance: none;
+    height: 45px;
+    border-radius: 10px;
+    border: 0 !important;
+    font-size: 17px;
+    color: #000E4A;
+    appearance: none;
     background-image: url(https://res.cloudinary.com/grupo-delsud/image/upload/v1655823583/ascascascasca_prxyc5.png);
     background-repeat: no-repeat;
     background-position-x: 95%;
@@ -243,8 +252,10 @@ option {
 
   @media (max-width: 480px) { 
       font-size: 13px;
+      text-align: center;
       option {
         font-size: 13px;
+        text-align: center;
       }
     }
     @media (max-width: 767px) { 
@@ -283,9 +294,9 @@ export const BoxButton = styled.div`
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    margin-bottom: -115px;
+    margin-top: -40px;
     @media (max-width: 480px) { 
-      margin-bottom: 0px;
+      margin-top: -20px;
     }
 
 `

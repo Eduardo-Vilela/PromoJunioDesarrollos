@@ -265,7 +265,7 @@ function PromoJunio() {
                     <ContenedorInputs>
                     <LabelInputs htmlFor="cuotas">Seleccioná la cantidad de cuotas</LabelInputs>
                        <InputSelect name="cuotas" {...register("cuotas", { required: true })} onChange ={(e)=>{onChangeFormDatos(e)}}>
-                            <option value="12 meses">12 meses</option>
+                            <option value="12 meses"> 12 meses</option>
                             <option value="24 meses">24 meses</option>
                             <option value="36 meses">36 meses</option>
                             <option value="48 meses">48 meses</option>
@@ -299,10 +299,11 @@ function PromoJunio() {
                       <NumerosSlider>2.000.000</NumerosSlider>
                    </ContenedorNumeros>
                 </ContenedorInputRange>
-                  <BoxButton>
+
+            </ContenedorForm>
+            <BoxButton>
                      <ButtonForm disabled={!isValid} type="submit" onClick={() => handleOpen('xs')} >COTIZAR</ButtonForm>
                   </BoxButton>
-            </ContenedorForm>
           </Box2>
         </SubBox>
      </BoxPrincipal>
