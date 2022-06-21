@@ -41,13 +41,13 @@ justify-content: center;
 `
 export const Box1 = styled.div`
 width: 100%;
-height: 35vh;
+height: 22vh;
 
 @media (max-width: 480px) { 
-  height: 50vh;
+  height: 30vh;
     }
     @media (max-width: 767px) { 
-      height: 50vh;
+      height: 30vh;
      }
 `
 export const Box2 = styled.div`
@@ -82,10 +82,10 @@ margin-left: -24px;
 export const Titulo = styled.h1`
 color: white;
 font-family:'Poppins';
-font-size: 50px;
+font-size: 60px;
 font-weight: 700;
-
-margin: 0;
+text-shadow: 3px 1px 2px black;
+line-height: 1.3em;
 
 @media (max-width: 480px) { 
   font-size: 30px;
@@ -97,14 +97,14 @@ margin: 0;
 export const SubTitulo = styled.p`
 color: white;
 font-family:'Poppins';
-font-size: 27px;
+font-size: 30px;
 font-weight: 500;
-
+text-shadow: 3px 1px 2px black;
 @media (max-width: 480px) { 
-  font-size: 16px;
+  font-size: 18px;
     }
     @media (max-width: 767px) { 
-      font-size: 16px;
+      font-size: 18px;
      }
 `
 export const ContenedorForm = styled.form`
@@ -158,21 +158,21 @@ font-weight: 600;
      }
 `
 export const InputForm  = styled.input`
-height: 40px !important;
+height: 45px !important;
 border-radius: 10px !important;
 border: 0;
 font-size: 18px;
 font-family: 'Poppins';
-
+text-indent: 10px;
 @media (max-width: 480px) { 
-      font-size: 13px;
+      font-size: 15px;
     }
     @media (max-width: 767px) { 
-      font-size: 13px;
+      font-size: 15px;
      }
 `
 export const ButtonForm = styled.button`
-width: 20%;
+width: 25%;
 height: 8vh;
 font-size: 30px;
 font-family: 'Poppins';
@@ -184,7 +184,7 @@ background-color: #759D01;
 
 
 :disabled {
-      opacity: 0.4 !important;
+      opacity: 0.6 !important;
     }
 
     @media (max-width: 480px) { 
@@ -217,9 +217,17 @@ export const SubContenedorForm = styled.div`
      }
 `
 export const InputSelect = styled.select`
-height: 40px;
+height: 45px;
 border-radius: 10px;
-border: 0;
+border: 0 !important;
+font-size: 17px;
+color: #000E4A;
+appearance: none;
+    background-image: url(https://res.cloudinary.com/grupo-delsud/image/upload/v1655823583/ascascascasca_prxyc5.png);
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 17px;
+    background-size: 7%;
 
 option {
     color: #000E4A;
@@ -232,6 +240,7 @@ option {
     padding: 0px 2px 1px;
     text-align: center;
   }
+
   @media (max-width: 480px) { 
       font-size: 13px;
       option {
@@ -274,10 +283,13 @@ export const BoxButton = styled.div`
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    height: 40px;
+    margin-bottom: -115px;
+    @media (max-width: 480px) { 
+      margin-bottom: 0px;
+    }
+
 `
 export const BoxTitulo = styled.div`
-height: 80px;
 
 
 @media (max-width: 480px) { 
@@ -326,17 +338,16 @@ font-size: 15px;
 `
 export const BoxPrincipalModal = styled.div`
 width: 100%;
-height: 50vh;
 display: flex;
     flex-direction: column;
     justify-content: center;
 
-    @media (max-width: 480px) { 
+    /* @media (max-width: 480px) { 
       height: 60vh;
     }
     @media (max-width: 767px) { 
       height: 60vh;
-     }
+     } */
 `
 export const BoxTituloModal = styled.div`
 padding: 10px;
@@ -345,10 +356,12 @@ export const TituloModal = styled.h1`
 color: #000E4A;
 font-size: 50px;
 font-family: 'Poppins';
+line-height: 1.3em;
 font-weight: 500;
 text-align: center;
 @media (max-width: 480px) { 
       font-size: 20px;
+      line-height: 1.3em;
     }
     @media (max-width: 767px) { 
       font-size: 20px;
@@ -356,10 +369,14 @@ text-align: center;
 `
 
 export const ContenedorBoxsModal = styled.div`
-padding: 10px;
-display: flex;
+    padding: 10px;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: 480px) { 
+      padding: 0px;
+    }
 `
 export const Box1Modal = styled.div`
 width: 100%;
@@ -371,13 +388,15 @@ width: 100%;
 
     @media (max-width: 480px) { 
       flex-direction: column;
+      padding: 10px;
     }
     @media (max-width: 767px) { 
       flex-direction: column;
+      padding: 10px;
      }
 `
 export const Box2Modal = styled.div`
-width: 50%;
+width: 70%;
 margin: auto;
 align-items: center;
 display: flex;
@@ -399,12 +418,17 @@ padding: 20px;
      }
 `
 export const BoxButtonModal = styled.div`
-width: 100%;
-padding: 10px;
-align-items: center;
-display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (max-width: 480px) { 
+      width: 100%;
+     }
 `
 
 export const SubtitulosModal = styled.p`
@@ -415,10 +439,10 @@ font-weight: 500;
 text-align: center;
 
 @media (max-width: 480px) { 
-      font-size: 14px;
+      font-size: 18px;
     }
     @media (max-width: 767px) { 
-      font-size: 14px;
+      font-size: 18px;
      }
 `
 
@@ -455,10 +479,10 @@ font-family: 'Poppins';
 font-weight: 700;
 text-align: center;
 @media (max-width: 480px) { 
-      font-size: 14px;
+      font-size: 18px;
     }
     @media (max-width: 767px) { 
-      font-size: 14px;
+      font-size: 18px;
      }
 `
 
@@ -480,7 +504,7 @@ export const Box4Modal = styled.div`
 export const ButtonModal = styled.button`
 background: white;
 width: 25%;
-height: 40%;
+height: 60px;
 border: 2px solid #000E4A;
 border-radius: 5px;
 color: #000E4A;

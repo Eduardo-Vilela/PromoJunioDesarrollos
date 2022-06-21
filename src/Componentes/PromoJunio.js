@@ -51,16 +51,16 @@ let montoTotal=0;
 function PromoJunio() {
 
    const [value, setValue] = useState(0);
-    const [formDatos,setFormDatos]= useState({cuotas:"12 meses",nombre:"",Desarrollo:""});
+    const [formDatos,setFormDatos]= useState({cuotas:"12 meses", nombre:"", Desarrollo:""});
+    const [cuotas, setCuotas] = useState();
+    const [nombre, setNombre] = useState();
     const [montoCuotas,setMontoCuotas]= useState();
     const [fotoDesarrollo,setFotoDesarrollo] = useState();
 
     useEffect (()=>{ 
       if(formDatos.Desarrollo == "La Escondida - Los Hornos"){
         setFotoDesarrollo(
-    
           'https://res.cloudinary.com/grupo-delsud/image/upload/v1653595256/DESARROLLOSGRUPODELSUD/Logo-La-Escondida-fondo-transparente-con-sombra-17-1024x1024_pwiaxc.png'
-        
         )
       }
       if(formDatos.Desarrollo == "Las Victorias - Abasto"){
@@ -122,59 +122,72 @@ function PromoJunio() {
             setMontoCuotas(montoTotal);
         }
         if(formDatos.cuotas == "24 meses"){
-            montoTotal =Math.round(((3300000 - value) / 12));
+            montoTotal =Math.round(((3300000 - value) / 24));
             setMontoCuotas(montoTotal);
         }
         if(formDatos.cuotas == "36 meses"){
-            montoTotal =Math.round(((3300000 - value) / 12));
+            montoTotal =Math.round(((3300000 - value) / 36));
             setMontoCuotas(montoTotal);
         }
         if(formDatos.cuotas == "48 meses"){
-            montoTotal =Math.round(((3300000 - value) / 12));
+            montoTotal =Math.round(((3300000 - value) / 48));
             setMontoCuotas(montoTotal);
         }
         if(formDatos.cuotas == "60 meses"){
-          montoTotal =Math.round(((3300000 - value) / 12));
+          montoTotal =Math.round(((3300000 - value) / 60));
           setMontoCuotas(montoTotal);
-      }
-      if(formDatos.cuotas == "72 meses"){
-        montoTotal =Math.round(((3300000 - value) / 12));
-        setMontoCuotas(montoTotal);
-    }
-    if(formDatos.cuotas == "84 meses"){
-      montoTotal =Math.round(((3300000 - value) / 12));
-      setMontoCuotas(montoTotal);
-  }
-      },[value,formDatos]);
+        }
+        if(formDatos.cuotas == "72 meses"){
+          montoTotal =Math.round(((3300000 - value) / 72));
+          setMontoCuotas(montoTotal);
+        }
+        if(formDatos.cuotas == "84 meses"){
+          montoTotal =Math.round(((3300000 - value) / 84));
+          setMontoCuotas(montoTotal);
+        }
+        
+        if(formDatos.cuotas != null){
+          setCuotas(formDatos.cuotas);
+        }
+
+        if(formDatos.nombre != null){
+          setNombre(formDatos.nombre);
+        }
+         
+
+      },[value, formDatos]);
     // ENVIAR FORMULARIO//
     
 
 
     const {
       register,
+      reset,
       formState: { errors,isValid},
       handleSubmit
     } = useForm({
       mode: "onChange"
     });
     const onSubmit = (data) => {   
+      setFormDatos({nombre:data.nombre, Desarrollo: data.Desarrollo, cuotas: data.cuotas}) 
         let formData = new FormData();
         formData.append("data",JSON.stringify(data))
         formData.append("value",JSON.stringify(value))
         formData.append("montoCuotas",JSON.stringify(montoCuotas))
         formData.append("cantCuotas",JSON.stringify(formDatos.cuotas))
         formData.append("nombre",JSON.stringify(formDatos.nombre))
-        formData.append("Desarrollo",JSON.stringify(formDatos.Desarrollo))
         
-      axios.post(`https://promo.desarrollosdelsud.com.ar/webApi/public/FormularioPromoDesarrollo`, formData)
+        
+      axios.post(`https://promo.desarrollosdelsud.com.ar/webApi/public/FormularioPromo`, formData)
       .then(function (response) {
-        
+        reset()
       })
       .catch(function (error) {
         console.log(error);
+        reset()
       });
   
-      //setSubmitValue(data);
+       //setSubmitValue(data);
     };
 
     //MODAL
@@ -187,7 +200,7 @@ function PromoJunio() {
     const handleClose = () => setOpen(false);
 
 
-    console.log()
+    console.log(formDatos.nombre)
   return (
     <>
     <Container>
@@ -219,7 +232,7 @@ function PromoJunio() {
                         {errors.nombre && <Errores >Campo Requerido!</Errores>}
                     </ContenedorInputs>
                     <ContenedorInputs>
-                    <LabelInputs  htmlFor="phone">N° de teléfono </LabelInputs>
+                    <LabelInputs  htmlFor="phone">Teléfono </LabelInputs>
                     <InputForm 
                         type="number"
                         {...register("phone", {
@@ -252,13 +265,13 @@ function PromoJunio() {
                     <ContenedorInputs>
                     <LabelInputs htmlFor="cuotas">Seleccioná la cantidad de cuotas</LabelInputs>
                        <InputSelect name="cuotas" {...register("cuotas", { required: true })} onChange ={(e)=>{onChangeFormDatos(e)}}>
-                            <option value="12 meses"> 12 meses </option>
+                            <option value="12 meses">12 meses</option>
                             <option value="24 meses">24 meses</option>
                             <option value="36 meses">36 meses</option>
                             <option value="48 meses">48 meses</option>
                             <option value="60 meses">60 meses</option>
                             <option value="72 meses">72 meses</option>
-                            <option value="84 meses" selected={"84 meses"}>84 meses</option>
+                            <option value="84 meses" selected={"84 meses"}> 84 meses </option>
                       </InputSelect>
                         
                     </ContenedorInputs> 
@@ -295,10 +308,10 @@ function PromoJunio() {
      </BoxPrincipal>
      </Container>
 
-     <Modal style={{display:'flex',flexDirection:'column',justifyContent:'center'}} size={'lg'} open={open} onClose={handleClose}>
+     <Modal style={{display:'flex',flexDirection:'column',justifyContent:'center', background: '#000000c4'}} size={'lg'} open={open} onClose={handleClose}>
       <BoxPrincipalModal>
         <BoxTituloModal>
-          <TituloModal> <span className="modal-title">¡Gracias {formDatos.nombre}!</span></TituloModal>
+          <TituloModal> <span className="modal-title">¡Gracias {nombre}!</span></TituloModal>
         </BoxTituloModal>
         <ContenedorBoxsModal>
           <Box1Modal>
@@ -306,7 +319,7 @@ function PromoJunio() {
             <BoxImagenDesarrolloModal>
               <ImagenDesarrolloModal src={fotoDesarrollo}></ImagenDesarrolloModal>
             </BoxImagenDesarrolloModal>
-            <SubtitulosModal>en </SubtitulosModal><NumeroMonto>{formDatos.cuotas}</NumeroMonto>
+            <SubtitulosModal>en </SubtitulosModal><NumeroMonto> {cuotas} </NumeroMonto>
           </Box1Modal>    
           <Box2Modal>
             <Box4Modal>
@@ -318,7 +331,8 @@ function PromoJunio() {
           </Box2Modal>     
         </ContenedorBoxsModal>
         <BoxButtonModal>
-          <Parrafito>El resultado proveniente del siguiente simulador es meramente referencial, no reviste carácter contractual ni está sujeto a una futura compra. La cuota es ajustable con el IPC registrado por el INDEC.</Parrafito>
+          <Parrafito>El resultado proveniente del siguiente simulador es meramente referencial, no reviste carácter contractual ni está sujeto a una futura compra. <br></br> La cuota es ajustable con el IPC registrado por el INDEC.</Parrafito>
+          <br></br><br></br>
           <ButtonModal onClick={handleClose} appearance="subtle">
             VOLVER A CALCULAR
           </ButtonModal>
