@@ -34,9 +34,11 @@ justify-content: center;
 
 @media (max-width: 480px) { 
       width: 90%;
+      height: auto;
     }
     @media (max-width: 767px) { 
       width: 90%;
+      height: auto;
      }
 `
 export const Box1 = styled.div`
@@ -229,7 +231,7 @@ export const InputSelect = styled.select`
     height: 45px;
     border-radius: 10px;
     border: 0 !important;
-    font-size: 15px;
+    font-size: 14px;
     color: #000E4A;
     appearance: none;
     background-image: url(https://res.cloudinary.com/grupo-delsud/image/upload/v1655823583/ascascascasca_prxyc5.png);
@@ -268,7 +270,7 @@ option {
 export const ContenedorInputRange = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     width: 100%;
     height: 180px;
     align-items: center;

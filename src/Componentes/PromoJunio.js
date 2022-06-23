@@ -41,10 +41,10 @@ Parrafito,
 } from './PromoElements'
 import { useForm, useFormState } from "react-hook-form";
 import axios from "axios";
-import { Button, Slider,Modal } from 'rsuite';
-import './calculador.css'
+import { Modal } from 'rsuite';
+import './range.css'
 import 'rsuite/dist/rsuite.min.css';
-
+import RangeSlider from 'react-bootstrap-range-slider';
 
 
 let montoTotal=0;
@@ -212,7 +212,7 @@ function PromoJunio() {
             <SubTitulo>Construí recuerdos en tu propiedad</SubTitulo>
           </Box1>
           <Box2>
-            <ContenedorForm  onSubmit={handleSubmit(onSubmit)}>
+            <ContenedorForm className='formInputs' onSubmit={handleSubmit(onSubmit)}>
                 <BoxTitulo>
                   <TituloForm>Calculá tu cuota</TituloForm>
                 </BoxTitulo>
@@ -281,22 +281,30 @@ function PromoJunio() {
                   <LabelInputRange htmlFor="Cuotas">Seleccioná el anticipo</LabelInputRange>
                 </div>
                 <div className='calculador-slider'>
-                    <Slider
-                    className='slider-filtro'
-                    progress      
-                    step={1000}            
-                    min={5000}
-                    max={2000000}
-                    value={value}
-                    onChange={value => {
-                      setValue(value);
-                      }}   
-                    name='montoAInvertir'
+                    <RangeSlider
+                    // className='slider-filtro'
+                    // progress      
+                    // step={1000}            
+                    // min={5000}
+                    // max={2000000}
+                    // value={value}
+                    // onChange={value => {
+                    //   setValue(value);
+                    //   }}   
+                    // name='montoAInvertir'
+
+                            type="range"
+                            className='slider-filtro'  
+                            step={1000}  
+                            min={0.0}
+                            max={2000000}
+                            value={value}
+                            onChange={e => setValue(e.target.value)} 
                     />  
                 </div>    
                 <ContenedorNumeros>  
-                      <NumerosSlider>0</NumerosSlider>
-                      <NumerosSlider>2.000.000</NumerosSlider>
+                      <NumerosSlider>${value}</NumerosSlider>
+                      <NumerosSlider>$2.000.000</NumerosSlider>
                    </ContenedorNumeros>
                 </ContenedorInputRange>
 

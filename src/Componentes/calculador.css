@@ -1,4 +1,6 @@
-
+.range-slider-wrap input[type="range"]{
+    background-color: red !important;
+}
 
 .slider-filtro .rs-slider-progress-bar{
     transition: none!important;
@@ -64,20 +66,20 @@
     box-shadow: 0 0 0 8px #03285438!important;
 }
 
-.rango-filtro{
+.range-filtro{
     border: none;
 }
 
-.rango-filtro:focus{
+.range-filtro:focus{
     box-shadow: none;
     outline: none;
 }
-.rango-filtro .rs-input-group:not(.rs-input-group-disabled).rs-input-group-focus{    
+.range-filtro .rs-input-group:not(.rs-input-group-disabled).rs-input-group-focus{    
     box-shadow: none;
     outline: none;
 }
 
-.rango-filtro .rs-input:disabled{
+.range-filtro .rs-input:disabled{
     background-color: #fff;
     color:#032854;
     font-size: 16px;
@@ -227,6 +229,10 @@
     width: 90%;
 }
 
+
+.range-slider__tooltip{
+    display: none !important;
+}
 @media only screen and (max-width: 768px) {
     .calculador-conteiner{
         height: auto;
