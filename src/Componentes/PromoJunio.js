@@ -60,41 +60,41 @@ function PromoJunio() {
     useEffect (()=>{ 
       if(formDatos.Desarrollo == "La Escondida - Los Hornos"){
         setFotoDesarrollo(
-          'https://res.cloudinary.com/grupo-delsud/image/upload/v1653595256/DESARROLLOSGRUPODELSUD/Logo-La-Escondida-fondo-transparente-con-sombra-17-1024x1024_pwiaxc.png'
+          'https://res.cloudinary.com/grupo-delsud/image/upload/v1653595256/DESARROLLOSGRUPODELSUD/Logo-La-Escondida-fondo-transparente-con-sombra-17-1024x1024_pwiaxc.webp'
         )
       }
       if(formDatos.Desarrollo == "Las Victorias - Abasto"){
         setFotoDesarrollo(
     
-          'https://res.cloudinary.com/grupo-delsud/image/upload/v1649626460/DESARROLLOSGRUPODELSUD/Group_184_j7j7rc.svg'
+          'https://res.cloudinary.com/grupo-delsud/image/upload/v1649626460/DESARROLLOSGRUPODELSUD/Group_184_j7j7rc.webp'
         
         )
       }
       if(formDatos.Desarrollo == "El Juncal - Lisandro Olmos"){
         setFotoDesarrollo(
     
-          'https://res.cloudinary.com/grupo-delsud/image/upload/v1648823298/DESARROLLOSGRUPODELSUD/eljuncalLetras_xlttzf.svg'
+          'https://res.cloudinary.com/grupo-delsud/image/upload/v1648823298/DESARROLLOSGRUPODELSUD/eljuncalLetras_xlttzf.webp'
         
         )
       }
       if(formDatos.Desarrollo == "La Campiña - Ángel Etcheverry"){
         setFotoDesarrollo(
     
-          'https://res.cloudinary.com/grupo-delsud/image/upload/v1649431167/DESARROLLOSGRUPODELSUD/lacampi%C3%B1a_hdxe5y.svg'
+          'https://res.cloudinary.com/grupo-delsud/image/upload/v1649431167/DESARROLLOSGRUPODELSUD/lacampi%C3%B1a_hdxe5y.webp'
         
         )
       }
       if(formDatos.Desarrollo == "Las Orianas - Melchor Romero"){
         setFotoDesarrollo(
     
-          'https://res.cloudinary.com/grupo-delsud/image/upload/v1649692006/DESARROLLOSGRUPODELSUD/Logo-Banner-Las-Orianas_qmldsg.svg'
+          'https://res.cloudinary.com/grupo-delsud/image/upload/v1649692006/DESARROLLOSGRUPODELSUD/Logo-Banner-Las-Orianas_qmldsg.webp'
         
         )
       }
       if(formDatos.Desarrollo == "Latitud 34 - Los Hornos"){
         setFotoDesarrollo(
     
-          'https://res.cloudinary.com/grupo-delsud/image/upload/v1649637673/DESARROLLOSGRUPODELSUD/Groupaaa_vvoggh.svg'
+          'https://res.cloudinary.com/grupo-delsud/image/upload/v1649637673/DESARROLLOSGRUPODELSUD/Groupaaa_vvoggh.webp'
         
         )
       }else{
@@ -118,31 +118,31 @@ function PromoJunio() {
       useEffect(()=>{   
           
         if(formDatos.cuotas == "12 meses"){
-            montoTotal =Math.round(((3300000 - value) / 12));
+            montoTotal =Math.round(((3600000 - value) / 12));
             setMontoCuotas(montoTotal);
         }
         if(formDatos.cuotas == "24 meses"){
-            montoTotal =Math.round(((3300000 - value) / 24));
+            montoTotal =Math.round(((3600000 - value) / 24));
             setMontoCuotas(montoTotal);
         }
         if(formDatos.cuotas == "36 meses"){
-            montoTotal =Math.round(((3300000 - value) / 36));
+            montoTotal =Math.round(((3600000 - value) / 36));
             setMontoCuotas(montoTotal);
         }
         if(formDatos.cuotas == "48 meses"){
-            montoTotal =Math.round(((3300000 - value) / 48));
+            montoTotal =Math.round(((3600000 - value) / 48));
             setMontoCuotas(montoTotal);
         }
         if(formDatos.cuotas == "60 meses"){
-          montoTotal =Math.round(((3300000 - value) / 60));
+          montoTotal =Math.round(((3600000 - value) / 60));
           setMontoCuotas(montoTotal);
         }
         if(formDatos.cuotas == "72 meses"){
-          montoTotal =Math.round(((3300000 - value) / 72));
+          montoTotal =Math.round(((3600000 - value) / 72));
           setMontoCuotas(montoTotal);
         }
         if(formDatos.cuotas == "84 meses"){
-          montoTotal =Math.round(((3300000 - value) / 84));
+          montoTotal =Math.round(((3600000 - value) / 84));
           setMontoCuotas(montoTotal);
         }
         
@@ -207,7 +207,7 @@ function PromoJunio() {
      <BoxPrincipal>
         <SubBox>
           <Box1>
-            <Logo  alt='logoPrincipal' src='https://res.cloudinary.com/grupo-delsud/image/upload/v1655306334/DESARROLLOSGRUPODELSUD/PromoJunio/desarrollo_blanco-03_1_qzwl2c.svg'/>
+            <Logo  alt='logoPrincipal' src='https://res.cloudinary.com/grupo-delsud/image/upload/v1655306334/DESARROLLOSGRUPODELSUD/PromoJunio/desarrollo_blanco-03_1_qzwl2c.webp'/>
             <Titulo>Tu terreno propio financiado al 100% </Titulo>
             <SubTitulo>Construí recuerdos en tu propiedad</SubTitulo>
           </Box1>
@@ -307,11 +307,10 @@ function PromoJunio() {
                       <NumerosSlider>$2.000.000</NumerosSlider>
                    </ContenedorNumeros>
                 </ContenedorInputRange>
-
-            </ContenedorForm>
-            <BoxButton>
+                <BoxButton>
                      <ButtonForm disabled={!isValid} type="submit" onClick={() => handleOpen('xs')} >COTIZAR</ButtonForm>
                   </BoxButton>
+            </ContenedorForm>
           </Box2>
         </SubBox>
      </BoxPrincipal>

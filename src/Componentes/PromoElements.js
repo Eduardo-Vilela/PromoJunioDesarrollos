@@ -10,7 +10,7 @@ export const Container = styled.div`
 export const BoxPrincipal = styled.div`
 width: 100%;
 height: 900px;
-background-image: url(https://res.cloudinary.com/grupo-delsud/image/upload/v1655296276/DESARROLLOSGRUPODELSUD/PromoJunio/Foto_de_fondo_-_La_Escondida_1_ught5g.png);
+background-image: url(https://res.cloudinary.com/grupo-delsud/image/upload/v1656009739/DESARROLLOSGRUPODELSUD/PromoJunio/fondo_ls99i1.webp);
 background-size: contain;
 background-repeat: no-repeat;
 @media (max-width: 480px) { 
