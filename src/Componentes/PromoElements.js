@@ -9,7 +9,7 @@ export const Container = styled.div`
 
 export const BoxPrincipal = styled.div`
 width: 100%;
-height: 100vh;
+height: 900px;
 background-image: url(https://res.cloudinary.com/grupo-delsud/image/upload/v1655296276/DESARROLLOSGRUPODELSUD/PromoJunio/Foto_de_fondo_-_La_Escondida_1_ught5g.png);
 background-size: contain;
 background-repeat: no-repeat;
@@ -26,7 +26,7 @@ background-repeat: no-repeat;
 `
 export const SubBox = styled.div`
 width: 80%;
-height: 100vh;
+height: 900px;
 margin: auto;
 display: flex;
 flex-direction: column;
@@ -41,7 +41,7 @@ justify-content: center;
 `
 export const Box1 = styled.div`
 width: 100%;
-height: 300px;
+height: 350px;
 
 @media (max-width: 480px) { 
   height: 30vh;
@@ -229,7 +229,7 @@ export const InputSelect = styled.select`
     height: 45px;
     border-radius: 10px;
     border: 0 !important;
-    font-size: 17px;
+    font-size: 15px;
     color: #000E4A;
     appearance: none;
     background-image: url(https://res.cloudinary.com/grupo-delsud/image/upload/v1655823583/ascascascasca_prxyc5.png);
