@@ -21,3 +21,10 @@
      width: 100%;
  }
 }
+
+.desactivar{
+    display: none!important;
+   }
+   .activar{
+    display: block!important;
+   }

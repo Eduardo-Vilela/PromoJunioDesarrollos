@@ -547,4 +547,17 @@ text-align: center;
       font-size: 10px;
      }
 
+` 
+export const ButtonFormFalso = styled.p`
+width: 25%;
+height: 8vh;
+font-size: 30px;
+font-family: 'Poppins';
+font-weight: 600;
+color: white !important;
+border: 0;
+border-radius: 10px;
+background-color: red;
+
+
 `

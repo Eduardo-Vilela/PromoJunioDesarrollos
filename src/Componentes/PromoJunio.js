@@ -38,6 +38,7 @@ ImagenDesarrolloModal,
 NumeroMonto,
 ButtonModal,
 Parrafito,
+ButtonFormFalso,
 } from './PromoElements'
 import { useForm, useFormState } from "react-hook-form";
 import axios from "axios";
@@ -45,7 +46,7 @@ import { Modal } from 'rsuite';
 import './range.css'
 import 'rsuite/dist/rsuite.min.css';
 import RangeSlider from 'react-bootstrap-range-slider';
-
+import './icono.css'
 
 let montoTotal=0;
 function PromoJunio() {
@@ -56,6 +57,9 @@ function PromoJunio() {
     const [nombre, setNombre] = useState();
     const [montoCuotas,setMontoCuotas]= useState();
     const [fotoDesarrollo,setFotoDesarrollo] = useState();
+    const [buttonFalso,setButtonFalso] = useState(true);
+
+
 
     useEffect (()=>{ 
       if(formDatos.Desarrollo == "La Escondida - Los Hornos"){
@@ -196,11 +200,12 @@ function PromoJunio() {
     const handleOpen = value => {
       setSize(value);
       setOpen(true);
+      setButtonFalso(false);
     };
     const handleClose = () => setOpen(false);
 
 
-    console.log(formDatos.nombre)
+    console.log(buttonFalso)
   return (
     <>
     <Container>
@@ -308,8 +313,9 @@ function PromoJunio() {
                    </ContenedorNumeros>
                 </ContenedorInputRange>
                 <BoxButton>
-                     <ButtonForm disabled={!isValid} type="submit" onClick={() => handleOpen('xs')} >COTIZAR</ButtonForm>
-                  </BoxButton>
+                  <input  onClick={() => handleOpen('xs')}  type='button' className={`${buttonFalso ? "desactivar" : "activar"}`} disabled={!isValid} value='sin enviar' /> 
+                  <ButtonForm className={`${buttonFalso ? "activar" : "desactivar"}`}  disabled={!isValid} type="submit" onClick={() => handleOpen('xs')} >COTIZAR / ENVIAR</ButtonForm> 
+                </BoxButton>
             </ContenedorForm>
           </Box2>
         </SubBox>
