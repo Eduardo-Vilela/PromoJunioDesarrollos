@@ -49,11 +49,11 @@ import 'rsuite/dist/rsuite.min.css';
 import RangeSlider from 'react-bootstrap-range-slider';
 import './icono.css'
 
-let montoTotal=0;
+var montoTotal=0;
 function PromoJunio() {
 
    const [value, setValue] = useState(0);
-    const [formDatos,setFormDatos]= useState({cuotas:"12 meses", nombre:"", Desarrollo:""});
+    const [formDatos,setFormDatos]= useState({cuotas:"84 meses", nombre:"", Desarrollo:"", montoAInvertir:""});
     const [cuotas, setCuotas] = useState();
     const [nombre, setNombre] = useState();
     const [montoCuotas,setMontoCuotas]= useState();
@@ -61,55 +61,6 @@ function PromoJunio() {
     const [buttonFalso,setButtonFalso] = useState(true);
 
 
-
-    useEffect (()=>{ 
-      if(formDatos.Desarrollo == "La Escondida - Los Hornos"){
-        setFotoDesarrollo(
-          'https://res.cloudinary.com/grupo-delsud/image/upload/v1653595256/DESARROLLOSGRUPODELSUD/Logo-La-Escondida-fondo-transparente-con-sombra-17-1024x1024_pwiaxc.webp'
-        )
-      }
-      if(formDatos.Desarrollo == "Las Victorias - Abasto"){
-        setFotoDesarrollo(
-    
-          'https://res.cloudinary.com/grupo-delsud/image/upload/v1649626460/DESARROLLOSGRUPODELSUD/Group_184_j7j7rc.webp'
-        
-        )
-      }
-      if(formDatos.Desarrollo == "El Juncal - Lisandro Olmos"){
-        setFotoDesarrollo(
-    
-          'https://res.cloudinary.com/grupo-delsud/image/upload/v1648823298/DESARROLLOSGRUPODELSUD/eljuncalLetras_xlttzf.webp'
-        
-        )
-      }
-      if(formDatos.Desarrollo == "La Campiña - Ángel Etcheverry"){
-        setFotoDesarrollo(
-    
-          'https://res.cloudinary.com/grupo-delsud/image/upload/v1649431167/DESARROLLOSGRUPODELSUD/lacampi%C3%B1a_hdxe5y.webp'
-        
-        )
-      }
-      if(formDatos.Desarrollo == "Las Orianas - Melchor Romero"){
-        setFotoDesarrollo(
-    
-          'https://res.cloudinary.com/grupo-delsud/image/upload/v1649692006/DESARROLLOSGRUPODELSUD/Logo-Banner-Las-Orianas_qmldsg.webp'
-        
-        )
-      }
-      if(formDatos.Desarrollo == "Latitud 34 - Los Hornos"){
-        setFotoDesarrollo(
-    
-          'https://res.cloudinary.com/grupo-delsud/image/upload/v1649637673/DESARROLLOSGRUPODELSUD/Groupaaa_vvoggh.webp'
-        
-        )
-      }else{
-        setFormDatos(
-          <h1>SELECIONE UN DESARROLLO!</h1>
-        )
-      }
-    
-      
-    },[formDatos.Desarrollo])
 
 
     const onChangeFormDatos =(e)=> {
@@ -121,6 +72,47 @@ function PromoJunio() {
       };
   
       useEffect(()=>{   
+        if(formDatos.Desarrollo == "La Escondida - Los Hornos"){
+        setFotoDesarrollo(
+          'https://res.cloudinary.com/grupo-delsud/image/upload/v1653595256/DESARROLLOSGRUPODELSUD/Logo-La-Escondida-fondo-transparente-con-sombra-17-1024x1024_pwiaxc.webp'
+        )
+      }
+      if(formDatos.Desarrollo == "Las Victorias - Abasto"){
+        setFotoDesarrollo(
+    
+          'https://res.cloudinary.com/grupo-delsud/image/upload/v1649626460/DESARROLLOSGRUPODELSUD/Group_184_j7j7rc.webp'
+        
+        )
+      }
+      if(formDatos.Desarrollo == "La Campiña - Ángel Etcheverry"){
+        setFotoDesarrollo(
+    
+          'https://res.cloudinary.com/grupo-delsud/image/upload/v1649431167/DESARROLLOSGRUPODELSUD/lacampi%C3%B1a_hdxe5y.webp'
+        
+        )
+      }
+      if(formDatos.Desarrollo == "El Juncal - Lisandro Olmos"){
+        setFotoDesarrollo(
+    
+          'https://res.cloudinary.com/grupo-delsud/image/upload/v1648823298/DESARROLLOSGRUPODELSUD/eljuncalLetras_xlttzf.webp'
+        
+        )
+      }
+      if(formDatos.Desarrollo == "Las Orianas - Melchor Romero"){
+        setFotoDesarrollo(
+    
+          'https://res.cloudinary.com/grupo-delsud/image/upload/v1649692006/DESARROLLOSGRUPODELSUD/Logo-Banner-Las-Orianas_qmldsg.webp'
+        
+        )
+      }
+       
+      if(formDatos.Desarrollo == "Latitud 34 - Los Hornos"){
+        setFotoDesarrollo(
+    
+          'https://res.cloudinary.com/grupo-delsud/image/upload/v1649637673/DESARROLLOSGRUPODELSUD/Groupaaa_vvoggh.webp'
+        
+        )
+      }
           
         if(formDatos.cuotas == "12 meses"){
             montoTotal =Math.round(((3600000 - value) / 12));
@@ -161,8 +153,16 @@ function PromoJunio() {
          
 
       },[value, formDatos]);
+
     // ENVIAR FORMULARIO//
-    
+    const currencyMask = (e) => {
+      let valor = e.toString();
+      valor = valor.replace(/\D/g, "");
+      valor = valor.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g,'$1.');
+      valor = valor.split('').reverse().join('').replace(/^[\.]/,'');
+      e=valor
+      return e;
+  }
 
 
     const {
@@ -174,11 +174,11 @@ function PromoJunio() {
       mode: "onChange"
     });
     const onSubmit = (data) => {   
-      setFormDatos({nombre:data.nombre, Desarrollo: data.Desarrollo, cuotas: data.cuotas}) 
+      //setFormDatos({nombre:data.nombre, Desarrollo: data.Desarrollo, cuotas: data.cuotas}) 
         let formData = new FormData();
         formData.append("data",JSON.stringify(data))
-        formData.append("value",JSON.stringify(value))
-        formData.append("montoCuotas",JSON.stringify(montoCuotas))
+        formData.append("value",JSON.stringify(currencyMask(value)))
+        formData.append("montoCuotas",JSON.stringify(currencyMask(montoCuotas)))
         formData.append("cantCuotas",JSON.stringify(formDatos.cuotas))
         formData.append("nombre",JSON.stringify(formDatos.nombre))
         
@@ -214,7 +214,7 @@ function PromoJunio() {
         <SubBox>
           <Box1>
             <CajaLogo>
-              <Logo width='180' height='100' alt='logoPrincipal' src='https://res.cloudinary.com/grupo-delsud/image/upload/v1655306334/DESARROLLOSGRUPODELSUD/PromoJunio/desarrollo_blanco-03_1_qzwl2c.webp'/>
+              <Logo width='200' height='150' alt='logoPrincipal' src='https://res.cloudinary.com/grupo-delsud/image/upload/v1656079657/DESARROLLOSGRUPODELSUD/PromoJunio/Logo_-_Desarrollos_Delsud_-_Web-02_ex4bbc.svg'/>
             </CajaLogo>
             <Titulo>Tu terreno propio financiado al 100% </Titulo>
             <SubTitulo>Construí recuerdos en tu propiedad</SubTitulo>
@@ -266,7 +266,6 @@ function PromoJunio() {
                         <option value="El Juncal - Lisandro Olmos">El Juncal - Lisandro Olmos</option>
                         <option value="La Campiña - Ángel Etcheverry">La Campiña - Ángel Etcheverry</option>
                         <option value="Las Orianas - Melchor Romero">Las Orianas - Melchor Romero</option>
-                        <option value="Latitud 34 - Los Hornos">Latitud 34 - Los Hornos</option>
                         </InputSelect>
                         {errors.lote &&  <Errores >Campo Requerido!</Errores>}
                     </ContenedorInputs>
@@ -279,7 +278,7 @@ function PromoJunio() {
                             <option value="48 meses">48 meses</option>
                             <option value="60 meses">60 meses</option>
                             <option value="72 meses">72 meses</option>
-                            <option value="84 meses" selected={"84 meses"}> 84 meses </option>
+                            <option value="84 meses" selected="84 meses"> 84 meses </option>
                       </InputSelect>
                         
                     </ContenedorInputs> 
@@ -299,7 +298,7 @@ function PromoJunio() {
                     // onChange={value => {
                     //   setValue(value);
                     //   }}   
-                    // name='montoAInvertir'
+                    name='montoAInvertir'
 
                             type="range"
                             className='slider-filtro'  
@@ -311,7 +310,7 @@ function PromoJunio() {
                     />  
                 </div>    
                 <ContenedorNumeros>  
-                      <NumerosSlider>${value}</NumerosSlider>
+                      <NumerosSlider>$ {currencyMask(value)}</NumerosSlider>
                       <NumerosSlider>$2.000.000</NumerosSlider>
                    </ContenedorNumeros>
                 </ContenedorInputRange>
@@ -343,7 +342,7 @@ function PromoJunio() {
             <SubtitulosModal>El valor de tu cuota es de : <span></span>  </SubtitulosModal>
             </Box4Modal>
             <Box3Modal>
-            <NumeroMonto>${Math.round(montoCuotas)}</NumeroMonto>
+            <NumeroMonto>${currencyMask(Math.round(montoCuotas))}</NumeroMonto>
             </Box3Modal>
           </Box2Modal>     
         </ContenedorBoxsModal>

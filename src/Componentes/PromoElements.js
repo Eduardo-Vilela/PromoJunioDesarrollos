@@ -67,7 +67,7 @@ height: 550px;
      }
 `
 export const Logo = styled.img`
-
+filter: drop-shadow(5px 5px 2px rgb(0 0 0 / 0.7));
 `
 export const Titulo = styled.h1`
 color: white;
