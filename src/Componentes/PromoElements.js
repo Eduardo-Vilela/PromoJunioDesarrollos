@@ -67,17 +67,7 @@ height: 550px;
      }
 `
 export const Logo = styled.img`
-margin-left: -24px;
-@media (max-width: 480px) { 
-  margin: 0;
-  width: 100%;
-  height: 50%;
-    }
-    @media (max-width: 767px) { 
-      width: 100%;
-      height: 50%;
-      margin: 0;
-     }
+
 `
 export const Titulo = styled.h1`
 color: white;
@@ -548,7 +538,7 @@ text-align: center;
      }
 
 ` 
-export const ButtonFormFalso = styled.p`
+export const ButtonFormFalso = styled.input`
 width: 25%;
 height: 8vh;
 font-size: 30px;
@@ -557,7 +547,22 @@ font-weight: 600;
 color: white !important;
 border: 0;
 border-radius: 10px;
-background-color: red;
+background-color: #759D01;
+`
 
+export const CajaLogo = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+margin-left: -23px;
+
+@media (max-width: 480px) { 
+  justify-content: center;
+  margin: 0;
+    }
+    @media (max-width: 767px) { 
+      justify-content: center;
+      margin: 0;
+     }
 
 `

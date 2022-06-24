@@ -39,6 +39,7 @@ NumeroMonto,
 ButtonModal,
 Parrafito,
 ButtonFormFalso,
+CajaLogo,
 } from './PromoElements'
 import { useForm, useFormState } from "react-hook-form";
 import axios from "axios";
@@ -212,7 +213,9 @@ function PromoJunio() {
      <BoxPrincipal>
         <SubBox>
           <Box1>
-            <Logo  alt='logoPrincipal' src='https://res.cloudinary.com/grupo-delsud/image/upload/v1655306334/DESARROLLOSGRUPODELSUD/PromoJunio/desarrollo_blanco-03_1_qzwl2c.webp'/>
+            <CajaLogo>
+              <Logo width='180' height='100' alt='logoPrincipal' src='https://res.cloudinary.com/grupo-delsud/image/upload/v1655306334/DESARROLLOSGRUPODELSUD/PromoJunio/desarrollo_blanco-03_1_qzwl2c.webp'/>
+            </CajaLogo>
             <Titulo>Tu terreno propio financiado al 100% </Titulo>
             <SubTitulo>Construí recuerdos en tu propiedad</SubTitulo>
           </Box1>
@@ -313,8 +316,8 @@ function PromoJunio() {
                    </ContenedorNumeros>
                 </ContenedorInputRange>
                 <BoxButton>
-                  <input  onClick={() => handleOpen('xs')}  type='button' className={`${buttonFalso ? "desactivar" : "activar"}`} disabled={!isValid} value='sin enviar' /> 
-                  <ButtonForm className={`${buttonFalso ? "activar" : "desactivar"}`}  disabled={!isValid} type="submit" onClick={() => handleOpen('xs')} >COTIZAR / ENVIAR</ButtonForm> 
+                  <ButtonFormFalso  onClick={() => handleOpen('xs')}  type='button' className={`${buttonFalso ? "desactivar" : "activar"}`} disabled={!isValid} value='COTIZAR' /> 
+                  <ButtonForm className={`${buttonFalso ? "activar" : "desactivar"}`}  disabled={!isValid} type="submit" onClick={() => handleOpen('xs')} >COTIZAR</ButtonForm> 
                 </BoxButton>
             </ContenedorForm>
           </Box2>
