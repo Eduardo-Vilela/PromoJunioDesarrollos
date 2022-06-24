@@ -214,10 +214,12 @@ function PromoJunio() {
         <SubBox>
           <Box1>
             <CajaLogo>
-              <Logo width='200' height='150' alt='logoPrincipal' src='https://res.cloudinary.com/grupo-delsud/image/upload/v1656079657/DESARROLLOSGRUPODELSUD/PromoJunio/Logo_-_Desarrollos_Delsud_-_Web-02_ex4bbc.svg'/>
+              <Logo width='200' height='100' alt='logoPrincipal' src='https://res.cloudinary.com/grupo-delsud/image/upload/v1656079657/DESARROLLOSGRUPODELSUD/PromoJunio/Logo_-_Desarrollos_Delsud_-_Web-02_ex4bbc.svg'/>
             </CajaLogo>
+            <div>
             <Titulo>Tu terreno propio financiado al 100% </Titulo>
             <SubTitulo>Construí recuerdos en tu propiedad</SubTitulo>
+            </div>
           </Box1>
           <Box2>
             <ContenedorForm className='formInputs' onSubmit={handleSubmit(onSubmit)}>

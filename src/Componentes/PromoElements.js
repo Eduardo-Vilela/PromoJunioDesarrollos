@@ -67,7 +67,7 @@ height: 550px;
      }
 `
 export const Logo = styled.img`
-filter: drop-shadow(5px 5px 2px rgb(0 0 0 / 0.7));
+    filter: drop-shadow(4px 2px 2px rgb(0 0 0 / 0.7));
 `
 export const Titulo = styled.h1`
 color: white;
@@ -104,13 +104,13 @@ margin: auto;
 display: flex;
 flex-direction: column;
 justify-content: center;
-
+position: relative;
 background-color: #1D2142;
 border-radius: 10px;
 
 @media (max-width: 480px) { 
   width: 100%;
-  height: 90%;
+  height: 95%;
 }
 `
 export const TituloForm = styled.h2`
@@ -279,16 +279,22 @@ font-family:'Poppins';
 font-size: 20px;
 font-weight: 600;
 line-height: 0.5em;
-
 `
 export const BoxButton = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    margin-top: -40px;
+    position: absolute;
+  top: 490px;
+  bottom: 0;
+  
     @media (max-width: 480px) { 
-      margin-top: -20px;
+      position: absolute;
+  top: 450px;
+  bottom: 0;
+  left: 0;
+  right: 0;
     }
 
 `
@@ -327,10 +333,10 @@ font-size: 20px;
 font-family: 'Poppins';
 font-weight: 500;
 @media (max-width: 480px) { 
-      font-size: 10px;
+      font-size: 14px;
     }
     @media (max-width: 767px) { 
-      font-size: 10px;
+      font-size: 14px;
      }
 
 `
@@ -548,6 +554,16 @@ color: white !important;
 border: 0;
 border-radius: 10px;
 background-color: #759D01;
+
+@media (max-width: 480px) { 
+      width: 35%;
+      height: 5vh;
+      font-size: 14px;
+    }
+    @media (max-width: 767px) { 
+      height: 5vh;
+      font-size: 14px;
+     }
 `
 
 export const CajaLogo = styled.div`
