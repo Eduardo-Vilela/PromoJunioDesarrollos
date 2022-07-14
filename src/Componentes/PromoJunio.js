@@ -74,34 +74,34 @@ function PromoJunio() {
       useEffect(()=>{   
         if(formDatos.Desarrollo == "La Escondida - Los Hornos"){
         setFotoDesarrollo(
-          'https://res.cloudinary.com/grupo-delsud/image/upload/v1653595256/DESARROLLOSGRUPODELSUD/Logo-La-Escondida-fondo-transparente-con-sombra-17-1024x1024_pwiaxc.webp'
+          'https://res.cloudinary.com/desarrollogrupodelsud/image/upload/v1657715434/DESARROLLOSGRUPODELSUD_2022-07-13_08_54/la%20escondida/Logo-La-Escondida-fondo-transparente-con-sombra-17-1024x1024_uj96z1_n7zhlv.webp'
         )
       }
       if(formDatos.Desarrollo == "Las Victorias - Abasto"){
         setFotoDesarrollo(
     
-          'https://res.cloudinary.com/grupo-delsud/image/upload/v1649626460/DESARROLLOSGRUPODELSUD/Group_184_j7j7rc.webp'
+          'https://res.cloudinary.com/desarrollogrupodelsud/image/upload/v1657715502/DESARROLLOSGRUPODELSUD_2022-07-13_08_54/Group_184_j7j7rc_fkyrds.webp'
         
         )
       }
       if(formDatos.Desarrollo == "La Campiña - Ángel Etcheverry"){
         setFotoDesarrollo(
     
-          'https://res.cloudinary.com/grupo-delsud/image/upload/v1649431167/DESARROLLOSGRUPODELSUD/lacampi%C3%B1a_hdxe5y.webp'
+          'https://res.cloudinary.com/desarrollogrupodelsud/image/upload/v1657715436/DESARROLLOSGRUPODELSUD_2022-07-13_08_54/lacampi%C3%B1a_hdxe5y_qzvlhe.webp'
         
         )
       }
       if(formDatos.Desarrollo == "El Juncal - Lisandro Olmos"){
         setFotoDesarrollo(
     
-          'https://res.cloudinary.com/grupo-delsud/image/upload/v1648823298/DESARROLLOSGRUPODELSUD/eljuncalLetras_xlttzf.webp'
+          'https://res.cloudinary.com/desarrollogrupodelsud/image/upload/v1657715487/DESARROLLOSGRUPODELSUD_2022-07-13_08_54/eljuncalLetras_xlttzf_kp4bnu.webp'
         
         )
       }
       if(formDatos.Desarrollo == "Las Orianas - Melchor Romero"){
         setFotoDesarrollo(
     
-          'https://res.cloudinary.com/grupo-delsud/image/upload/v1649692006/DESARROLLOSGRUPODELSUD/Logo-Banner-Las-Orianas_qmldsg.webp'
+          'https://res.cloudinary.com/desarrollogrupodelsud/image/upload/v1657715451/DESARROLLOSGRUPODELSUD_2022-07-13_08_54/melchore-romero-las-orianas_oxmzw1_yis4w6.webp'
         
         )
       }
@@ -109,37 +109,37 @@ function PromoJunio() {
       if(formDatos.Desarrollo == "Latitud 34 - Los Hornos"){
         setFotoDesarrollo(
     
-          'https://res.cloudinary.com/grupo-delsud/image/upload/v1649637673/DESARROLLOSGRUPODELSUD/Groupaaa_vvoggh.webp'
+          'https://res.cloudinary.com/desarrollogrupodelsud/image/upload/v1657715498/DESARROLLOSGRUPODELSUD_2022-07-13_08_54/Groupaaa_vvoggh_mhkmve.webp'
         
         )
       }
           
         if(formDatos.cuotas == "12 meses"){
-            montoTotal =Math.round(((3600000 - value) / 12));
+            montoTotal =Math.round(((3900000 - value) / 12));
             setMontoCuotas(montoTotal);
         }
         if(formDatos.cuotas == "24 meses"){
-            montoTotal =Math.round(((3600000 - value) / 24));
+            montoTotal =Math.round(((3900000 - value) / 24));
             setMontoCuotas(montoTotal);
         }
         if(formDatos.cuotas == "36 meses"){
-            montoTotal =Math.round(((3600000 - value) / 36));
+            montoTotal =Math.round(((3900000 - value) / 36));
             setMontoCuotas(montoTotal);
         }
         if(formDatos.cuotas == "48 meses"){
-            montoTotal =Math.round(((3600000 - value) / 48));
+            montoTotal =Math.round(((3900000 - value) / 48));
             setMontoCuotas(montoTotal);
         }
         if(formDatos.cuotas == "60 meses"){
-          montoTotal =Math.round(((3600000 - value) / 60));
+          montoTotal =Math.round(((3900000 - value) / 60));
           setMontoCuotas(montoTotal);
         }
         if(formDatos.cuotas == "72 meses"){
-          montoTotal =Math.round(((3600000 - value) / 72));
+          montoTotal =Math.round(((3900000 - value) / 72));
           setMontoCuotas(montoTotal);
         }
         if(formDatos.cuotas == "84 meses"){
-          montoTotal =Math.round(((3600000 - value) / 84));
+          montoTotal =Math.round(((3900000 - value) / 84));
           setMontoCuotas(montoTotal);
         }
         
@@ -214,7 +214,7 @@ function PromoJunio() {
         <SubBox>
           <Box1>
             <CajaLogo>
-              <Logo width='200' height='100' alt='logoPrincipal' src='https://res.cloudinary.com/grupo-delsud/image/upload/v1656079657/DESARROLLOSGRUPODELSUD/PromoJunio/Logo_-_Desarrollos_Delsud_-_Web-02_ex4bbc.svg'/>
+              <Logo width='200' height='100' alt='logoPrincipal' src='https://res.cloudinary.com/desarrollogrupodelsud/image/upload/v1657715464/DESARROLLOSGRUPODELSUD_2022-07-13_08_54/PromoJunio/Logo_-_Desarrollos_Delsud_-_Web-02_ex4bbc_g4umpo.svg'/>
             </CajaLogo>
             <div>
             <Titulo>Tu terreno propio financiado al 100% </Titulo>

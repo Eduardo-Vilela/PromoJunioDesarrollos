@@ -10,7 +10,7 @@ export const Container = styled.div`
 export const BoxPrincipal = styled.div`
 width: 100%;
 height: 900px;
-background-image: url(https://res.cloudinary.com/grupo-delsud/image/upload/v1656009739/DESARROLLOSGRUPODELSUD/PromoJunio/fondo_ls99i1.webp);
+background-image: url(https://res.cloudinary.com/desarrollogrupodelsud/image/upload/v1657715465/DESARROLLOSGRUPODELSUD_2022-07-13_08_54/PromoJunio/fondo_ls99i1_fjvyl7.jpg);
 background-size: contain;
 background-repeat: no-repeat;
 @media (max-width: 480px) { 
